@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <style>
+        html{
+            --x:url;
+        }
+        body{
+            width:100%;
+            height:100%;
+            /* display:flex; */
+        }
+        .background{
+            width:100%;
+            height: 929px;
+            background-image:url(https://best-extension.extfans.com/theme/wallpapers/1c0fedb39370ab2c831ee4103a81d53c/883a26cf9f96aa4cf60f58666f5b08.webp);
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+}
+        .head{
+            width:100px;
+            height:100%;
+            /* background-color:black; */
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+        }
+        .head a{
+            width: 100px;
+            height: 100px;
+            background-image:url(./背景/头.jpg);
+            background-size:cover;
+            border-radius:50%;
+            outline:5px #555 solid;
+            transition:2s;
+            margin-bottom: 30px;
+        }
+        .head a:hover{
+            transform:rotateZ(360deg);
+        }
+        .navmain{
+            width:100%;
+            height:30px;
+            position: absolute;
+        }
+        .nav1{
+            width:100%;
+            height: 30px;
+            margin:0px auto;
+            background-color:rgba(0, 0, 0, 0.7);
+            border-bottom-left-radius:50%;
+            border-bottom-right-radius:50%;
+            position:absolute;
+            z-index:1;
+        }
+        .nav2{
+            width: 100%;
+            height:200px;
+            margin-top:-200px;
+            background-color:rgba(0, 0, 0, 0.7);
+            display: flex;
+        }
+        .navmain:hover .nav2{
+            animation:top 2s 0.1s 1 forwards;
+            transform:translateY(0px);
+        }
+        .navmain:hover .nav1{
+            animation:top 2s 0.1s 1 forwards;
+            transform:translateY(0px);
+        }
+        @keyframes top{
+            from{
+                transform: translateY(0px);
+            }
+            to{
+                transform: translateY(200px);
+            }
+        }
+        .nav2 ul{
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav2 ul li{
+            width:100%;
+            height:20%;
+            background-color:rgba(0, 0, 0, 0.7);
+        }
+        .nav2 ul li a{
+            width: 100%;
+            height: 100%;
+            display: block;
+            color:white;
+            text-decoration:none;
+            text-align: center;
+            line-height:40px;
+            font-weight:bold;
+        }
+        .nav2 ul li a:hover{
+            color:rgba(0, 0, 0, 0.7);
+            background-color:rgba(255 , 255, 255, 0.7);
+        }
+        .nav1::after{
+            content:"\f03a";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color:rgba(255 , 255, 255, 0.7);
+            font-size:16px;
+            position: absolute;
+            left:50%;
+            top: 20%;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            /* background-color:black; */
+            position:relative;
+        }
+        .input1{
+            width:0px;
+            height:0px;
+            position: absolute;
+            margin:px;
+            padding:0px;
+            border:0px;
+
+        }
+        .input2{
+            margin-top:2px;
+            margin-bottom:2px;
+            padding:0px;
+            width:96px;
+            height:30px;
+            /* position: absolute; */
+            background-color:rgba(255 , 255, 255, 0.7);
+        }
+        .input3{
+            margin-top:2px;
+            margin-bottom:2px;
+            width:100px;
+            border:1px;
+            background-color:rgba(255 , 255, 255, 0.7);
+        }
+    </style>      
+</head>
+<body>
+    <nav class="navmain">
+        <nav class="nav2">
+            <ul>
+                <li><a href="https://www.bilibili.com/" target="blank">哔哩哔哩</a></li>
+                <li><a href="http://www.zhenbuka.fun/" target="blank">真不卡</a></li>
+                <li><a href="#" target="blank">蕾姆图</a></li>
+                <li><a href="#" target="blank">待定</a></li>
+                <li><a href="https://github.com/scp3033" target="blank">GitHub</a></li>
+            </ul>
+        </nav>
+        <div class="nav1"></div>
+    </nav>
+    <div class="background">
+        <div class="head"><a href="#" alt="上骨瓷"></a>
+            <div class="box1">
+                <form class="form" action="https://api.iyk0.com/kgmusic" target="blank">
+                    <input class="input1" type="text" name="msg" value="蕾姆">
+                    <input class="input2" type="text" name="n" value="例如1">
+                    <input class="input3" type="submit" value="选歌">     
+                </form>
+                <form class="form2" action="https://api.iyk0.com/kgmusic" target="blank">
+                    <input class="input1" type="text" name="msg" value="蕾姆">
+                    <input class="input3" type="submit" value="蕾姆所有歌">     
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
